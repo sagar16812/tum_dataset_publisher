@@ -1,6 +1,6 @@
 # TUM Data Publisher ROS2 Package
 
-This package publishes data from various [TUM datasets](https://vision.in.tum.de/data/datasets) to ROS2 topics, enabling integration with SLAM and other applications. Currently, it supports the **RGB-D SLAM Dataset and Benchmark**, with future plans to add support for:
+The main objective of creating this package was to bridge the gap between the TUM datasets and ROS 2. While TUM provides rosbag files, they are not directly compatible with ROS 2, making it challenging to use these datasets for testing SLAM and other applications. Additionally, the datasets lack proper ROS 2 message structures, making it difficult to publish sensor data like RGB images, depth images, IMU readings, and ground truth in a way that integrates smoothly with ROS 2-based systems. This package addresses these issues by providing a simple and effective way to publish TUM dataset sequences as ROS 2 topics, enabling researchers and developers to test their SLAM algorithms and other robotics applications seamlessly. Currently, it supports the **RGB-D SLAM Dataset and Benchmark**, with future plans to add support for:
 - Monocular Visual Odometry Dataset
 - 4Seasons Dataset
 - Visual Inertial Dataset
@@ -28,7 +28,7 @@ This package publishes data from various [TUM datasets](https://vision.in.tum.de
 1. Clone this repository into your ROS2 workspace `src` directory:
    ```bash
    cd ~/ros2_ws/src
-   git clone https://github.com/yourusername/tum_dataset_publisher.git
+   git clone https://github.com/sagar16812/tum_dataset_publisher.git
    ```
 2. Build the workspace:
    ```bash
